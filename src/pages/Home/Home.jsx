@@ -2,6 +2,9 @@ import Header from "../../components/Header/Header";
 import LocationCard from "../../components/LocationCard/LocationCard";
 import './Home.scss'
 import home1 from '../../images/home-1.jpeg'
+import Faq from "../../components/Faq/Faq";
+import Aboutus from "../../components/Aboutus/Aboutus";
+import Footer from "../../components/Footer/Footer";
 
 
 
@@ -85,6 +88,33 @@ function Home() {
           <p className="discover-sub">Ayinla Films, a Nigerian company, specializes in scouting and providing exceptional locations for film shoots and music videos. They are known for their dedication to quality and innovation, helping filmmakers and directors bring their visions to life with diverse location options tailored to their creative needs</p>
         </div>
 
+      </div>
+
+      <div className="sec-4" >
+
+          <div className="faq-header-con">
+
+          <h1 className="faq-header">Frequently Asked <span style={{ color: '#223A6A' }}>Questions</span></h1>
+
+            <p className="faq-subHeader">Easily setup an appointment directly from the location listing page using our integrated booking options.</p>
+
+          </div>
+
+          <div className="faq-drop-con">
+              <Faq/>
+
+
+          </div>
+
+      </div>
+
+      <div className="sec-5">  
+          <Aboutus/>  
+          
+      </div>
+
+      <div className="sec-6">
+        <Footer/>
       </div>
 
 

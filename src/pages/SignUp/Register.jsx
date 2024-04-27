@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {CircleLoader} from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
 import Header from '../../components/Header/Header.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function Register() {
 
@@ -186,6 +187,10 @@ function Register() {
           </Link>
         </div>
       </div>
+      <div className='footer-sec'>
+      <Footer/>
+      </div>
+     
     </div>
   );
 }

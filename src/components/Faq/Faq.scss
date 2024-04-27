@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+}
+
+.faq-con {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+
+    .drop-down {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      border: solid;
+      border-radius: 5px;
+      border-width: 1px;
+      border-color: #ccc;
+      gap: 2rem;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+
+        .drop-text {
+          font-size: 1rem;
+          color: #0C1623;
+            .drop-icon {
+              width: 18px;
+              height: 9px;
+            
+            }
+        }
+    }
+}
