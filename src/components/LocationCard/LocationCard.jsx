@@ -1,14 +1,22 @@
 import React from 'react'
 import './LocationCard.scss'
-function LocationCard({image, title, location, price}) {
+
+
+
+
+function LocationCard({item}) {
+
+  const openLocation = () => {
+    window.open(`/location/${item._id}`, '_blank');
+  };
   return (
-    <div className='location-card'>
-        <img src={image} alt='' className='location-img'/>
+    <div onClick={openLocation} className='location-card'>
+        <img src={item.images[0]} alt='' className='location-img'/>
         <div className='location-card-text-con'>
-          <p className='area'>{location}</p>
-          <p className='title'>{title}</p>
+          <p className='area'>{item.locationAdress}</p>
+          <p className='title'>{item.title}</p>
         </div>
-        <p className='price'>₦ {price}</p>
+        <p className='price'>₦ {item.price}</p>
     </div>
   )
 }

@@ -59,7 +59,7 @@ function Register() {
       const response = await newRequest.post('/auth/register', formData);
       localStorage.setItem("currentUser", JSON.stringify(response.data));
       console.log('Registration successful:', response.data);
-      navigate("/welcome");
+      navigate("/");
 
     } catch (error) {
       console.error('Registration failed:', error.response.data);

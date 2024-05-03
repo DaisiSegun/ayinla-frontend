@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from "react";
 import Header from "../../components/Header/Header";
 import LocationCard from "../../components/LocationCard/LocationCard";
 import './Home.scss'
@@ -8,7 +9,25 @@ import Footer from "../../components/Footer/Footer";
 
 
 
+
 function Home() {
+
+  const [loading, setLoading] = useState(true);
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/services/all')
+      .then(response => response.json())
+      .then(data => {
+        setLocations(data);
+        setLoading(false); // Set loading to false when data is fetched
+      })
+      .catch(error => {
+        console.error('Error fetching locations:', error);
+        setLoading(false); // Set loading to false on error
+      });
+  }, []);
+
   return (
     <div className="home">
        <Header/>
@@ -36,45 +55,18 @@ function Home() {
         <div className="view-all">View all</div>
       </div>
 
-      <div className="locationCard-con">
-
-    
-
-      <LocationCard
-        image= 'https://res.cloudinary.com/dsddxqtss/image/upload/v1714168352/dfveyg1voc1z2ar8jss3.jpg'
-        price= '700,000'
-        location= 'Ikeja, Lagos'
-        title= 'Residential Home'
-        
-      />
-
-      
-      <LocationCard
-              image= 'https://res.cloudinary.com/dsddxqtss/image/upload/v1714168352/a28ov7sma8u87crg5ypn.jpg'
-              price= '1,200,000'
-              location= 'Lekki, Lagos'
-              title= 'Sporting Stadium'
-              
+      {loading ? (
+        <p>Loading...</p> // Render a loading message or spinner while loading
+      ) : (
+        <div className="locationCard-con">
+          {locations.map(location => (
+            <LocationCard
+              key={location._id}
+              item={location}
             />
-
-    <LocationCard
-              image= 'https://res.cloudinary.com/dsddxqtss/image/upload/v1714169176/htd92bip503drx6cb0mb.jpg'
-              price= '800,000'
-              location= 'Lekki Ikate'
-              title= 'CLOVA D10'
-              
-            />
-
-<LocationCard
-              image= 'https://res.cloudinary.com/dsddxqtss/image/upload/v1714203566/a9vop1ufetlc8dxv9n1k.jpg'
-              price= '1,200,000'
-              location= 'Ikeja, Lagos'
-              title= 'Park'
-              
-            />
-          
-    
-    </div>
+          ))}
+        </div>
+      )}
 
 
     </div>
