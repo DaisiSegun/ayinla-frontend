@@ -173,3 +173,232 @@
     }
    
 }
+
+
+@media screen and (max-width: 950px) {
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  
+      .sec-1 {
+        display: flex;
+  
+        align-self: center;
+        flex-direction: column;
+        gap: 0.5rem;
+  
+          .sec-1-img{
+            width: 100%;
+            background-color: rgba(36, 171, 112, 0.04);
+            margin-left: 1rem;
+            padding-top: 2rem;
+            margin-right: 1rem;
+            align-self: center;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 2rem;
+            align-items: center;
+            justify-content: center;
+           
+            border-radius: 2rem;
+            .home-title {
+                font-size: 2rem;
+                font-weight: 600;
+                align-self: center;
+                text-align: start;
+                margin-left: -2rem;
+            }
+  
+            .home-subtitle{
+                font-size: 1rem;
+                color: #555555;
+                margin-top: 1rem;
+                line-height: 2;
+                text-align: start;
+                align-self: center;
+                margin-left: -2rem;
+            }
+            
+          }
+      }
+  
+      .sec-2-img {
+  
+        height: 16rem;
+        width: 100%;
+        
+        object-fit: cover;
+        border-radius: 2rem;
+        align-self: center;
+  
+  
+      }
+    .sec-2 {
+      display: flex;
+      flex-direction: column;
+      
+      margin-top: 1.5rem;
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  
+        .sec2-header {
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-bottom: 1rem;
+          
+  
+        }
+  
+  
+      .sec2-subheader-con {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+  
+          .sec2-subheader {
+            font-size: 0.75rem;
+            color: #555555;
+            width: 75%;
+            margin-bottom: 1rem;
+          }
+  
+          .view-all{
+            padding: 0.5rem;
+            border-radius: 1.5rem;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            color: #223A6A;
+            background-color: rgba(36, 171, 112, 0.1);
+            cursor: pointer;
+            width: max-content;
+            font-size: 0.65rem;
+          }
+      }
+  
+        .locationCard-con {
+          display: flex;
+          gap: 1rem;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+          padding: 0;
+        }
+    }
+    .sec-3{
+      display: flex;
+      
+      flex-direction: column;
+      border-radius: 1rem;
+      background-color: #F4FBF8;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+     
+  
+        .discover-img {
+          width: 100%;
+          height: 11.5rem;
+          object-fit: cover;
+          border-top-right-radius: 1rem;
+          border-top-left-radius: 1rem;
+        }
+  
+        .discover-con {
+          background-color: #F4FBF8;
+          
+          padding-top: 1rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          border-radius: 1rem;
+          width: 100%;
+            .dicover-header {
+              font-size: 1.5rem;
+              font-weight: 500;
+              width: 100%;
+              align-self: center;
+            }
+            .discover-sub {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 2;
+              color: #555555;
+              width: 100%;
+            }
+        }
+    }
+  
+      .sec-4 {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5rem;
+        margin-top: 3.5rem;
+        margin-left: 0rem;
+        padding: 0;
+  
+          .faq-header-con{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+  
+              .faq-header {
+                font-size: 1.5rem;
+                font-weight: 500;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+  
+  
+              }
+  
+              .faq-subHeader {
+  
+                  color: rgba(16, 28, 38, 0.8);
+                  width: 100%;
+  
+              }
+          }
+          .faq-drop-con {
+            display: flex;
+            flex-direction: column;
+          }
+      }
+  
+      .sec-5 {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          margin-left: 0;
+          margin-right: 0;
+
+          padding: 0;
+          
+        
+      }
+     
+  }
+
+
+
+}

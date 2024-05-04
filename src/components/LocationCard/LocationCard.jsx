@@ -16,7 +16,7 @@ function LocationCard({item}) {
           <p className='area'>{item.locationAdress}</p>
           <p className='title'>{item.title}</p>
         </div>
-        <p className='price'>₦ {item.price}</p>
+        <p className='price5'>₦ {item.price}</p>
     </div>
   )
 }

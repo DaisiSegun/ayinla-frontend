@@ -1,3 +1,4 @@
+
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -7,6 +8,7 @@ import CreateLocation from "./pages/CreateLocation/CreateLocation";
 import EditLocation from "./pages/EditLocation/EditLocation";
 import Home from "./pages/Home/Home";
 import Location from "./pages/Location/Location";
+import Menu from "./pages/Menu/Menu";
 import MyLocations from "./pages/MyLocations/MyLocations";
 import SearchResult from "./pages/SearchResult/SearchResult";
 import SignIn from "./pages/SignIn/SignIn";
@@ -35,6 +37,7 @@ function App() {
             <Route tittle='About us' element={<AboutUs/>} path="/about-us" />
             <Route tittle='Search Result' element={<SearchResult/>} path="/search-result" />
             <Route tittle='All Location' element={<AllLocations/>} path="/all-location" />
+            <Route tittle='Menu' element={<Menu/>} path="/menu" />
             
 
             

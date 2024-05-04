@@ -7,6 +7,7 @@ import profileImg from '../../images/avatar.jpg';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import newRequest from '../../utils/newRequest.js';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
   const [showDropdownContent, setShowDropdownContent] = useState(false);
@@ -32,14 +33,24 @@ function Header() {
 
   return (
     <div className='header'>
+
+      <div className='hello-user'>
+      
+  
       <div className='section-1'>
         <Link to='/' className='link'>
           <img src={logo} className='logo' alt='' />
         </Link>
-        <Search />
+        <Search/>
+       
       </div>
+      {currentUser && (
+          <p className='hello-user-text'>Hello, {currentUser.user.username}</p>
+        )}
 
-      <div className='section-2'>
+      </div>
+      <div className='menu-align'>
+      <div className='section-22  '>
         <div  onClick={() => window.location.href = '/about-us'}  className='menu' >About us</div>
         <div  onClick={() => window.location.href = '/all-location'}  className='menu'>Locations</div>
         <div className='menu'>Contact us</div>
@@ -60,6 +71,15 @@ function Header() {
             <button className='login-button'>Login</button>
           </Link>
         )}
+      </div>
+
+      {/* Menu bar for responsiveness */}
+      <div onClick={() => window.location.href = '/menu'} className='menu-bar'>
+          <MenuIcon className='menu-icon'/>
+          
+      </div>
+      
+
       </div>
     </div>
   );

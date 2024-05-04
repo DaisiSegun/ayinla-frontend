@@ -43,9 +43,9 @@ function AllLocations() {
   }
 
   return (
-    <div className='sps'>
-      <h1 className='header-24px'>All our Locations</h1>
-      <p className='subtitle-text'>Explore all Locations</p>
+    <div className='sps1'>
+      <h1 className='header-all3'>All our Locations</h1>
+      <p className='subtitle-text2'>Explore all Locations</p>
 
       <div className='location-card-con'> 
 

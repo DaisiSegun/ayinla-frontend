@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SignIn.scss';
 import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+
 
 import { CircleLoader } from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
@@ -20,7 +20,7 @@ function SignIn() {
 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +36,8 @@ function SignIn() {
       const response = await newRequest.post('/auth/login', formData);
       localStorage.setItem("currentUser", JSON.stringify(response.data));
      
-      navigate("/");
+      window.location.href = "/";
+
     } catch (error) {
    
       setError('Invalid username or password');

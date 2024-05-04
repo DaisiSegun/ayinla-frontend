@@ -5,6 +5,23 @@
   font-family: 'Open Sans';
 }
 
+.menu-align{
+  display: flex;
+  align-items: center;
+}
+
+.hello-user-text {
+ 
+  width: max-content;
+  margin-left: 0.4rem;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.menu-bar {
+  display: none;
+}
+
 .dropdown-content-log {
   display: flex;
   flex-direction: column;
@@ -67,7 +84,15 @@
 .header {
   display: flex;
   justify-content: space-between;
-    padding: 2rem;
+  padding: 2rem;
+  padding-bottom: 1rem;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ccc;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+ 
+ 
   
   
 
@@ -87,10 +112,12 @@
     }
 
 
-    .section-2 {
+    .section-22  {
       display: flex;
       align-items: center;
       gap: 1rem;
+     
+      
       .menu{
         font-size: 1rem;
         cursor: pointer;
@@ -113,4 +140,164 @@
 
 
     }
+}
+
+
+@media screen and (max-width: 950px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+
+  .menu-align{
+    display: flex;
+    align-items: center;
+    
+    
+  }
+
+  .hello-user-text {
+ 
+    width: max-content;
+    margin-left: 0.1rem;
+    font-weight: 500;
+    font-size: 0.65rem;
+  }
+  
+  .dropdown-content-log {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13%;
+    left: 1;
+    z-index: 101;
+  }
+  
+  .log-drop {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+    background-color: #F2F2F2;
+    color: #0F253B;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #0F253B;
+    transition: background-color 0.3s, color 0.3s;
+  
+    &:hover {
+      background-color: #0F253B;
+      color: white;
+    }
+  }
+  
+  .logout-button {
+  
+    border-style: solid;
+    border-width: 1px;
+    padding: 0.5rem;
+    border-color: #223A6A;
+    background-color: hsl(220, 77%, 92%);
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-left: 5rem;
+  
+  }
+  
+  .user-info{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .pro-img {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    object-fit: cover;
+  
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+      padding: 1rem;
+    
+    
+  
+      .section-1 {
+        display: flex;
+        align-items: center;
+  
+          .logo{
+            object-fit: contain;
+            margin-right: 0.5rem;
+            align-items: center;
+            width: 4.5rem;
+            margin-left: -0.3rem;
+  
+          }
+  
+          
+        
+      }
+  
+  
+      .section-22 {
+       display: none;
+        align-items: center;
+        gap: 1rem;
+      
+       
+        .menu{
+          font-size: 1rem;
+          cursor: pointer;
+        }
+  
+        .login-button {
+          padding: 1rem;
+          border-radius: 1.5rem;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          background-color: #223A6A;
+          font-size: 1rem;
+          cursor: pointer;
+          border-style: none;
+          color: white;
+  
+  
+        }
+  
+  
+  
+  
+      }
+
+      .menu-bar {
+        display: flex; // Display the menu bar when the screen size is <= 850px
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.2rem;
+        
+        height: max-content;
+        align-self: center;
+      }
+  
+      .menu-icon {
+        color: #0F253B;
+        cursor: pointer;
+       
+      }
+  }
+  
+
+
+
 }

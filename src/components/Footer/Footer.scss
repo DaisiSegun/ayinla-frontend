@@ -40,3 +40,49 @@
         }
     }
 }
+
+@media screen and (max-width: 950px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  
+  .footer {
+    display: flex;
+    gap: 2rem;
+    
+    margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    border-top-style: solid;
+    border-top-color: #ccc;
+    border-top-width: 1px;
+    padding-top: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  
+  
+    
+   
+  
+      .secs1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+          .footer-text{
+              color: #222222;
+              font-size: 0.75rem;
+              border-style: none;
+          }
+  
+          .footer-img {
+            display: flex;
+            gap: 0.75rem;
+          }
+      }
+  }
+
+}

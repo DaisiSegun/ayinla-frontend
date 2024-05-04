@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Register.scss'; 
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import {CircleLoader} from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
@@ -21,7 +21,7 @@ function Register() {
     userType: 'user',
   });
 
-  const navigate = useNavigate();
+ 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false);
@@ -58,7 +58,7 @@ function Register() {
       const response = await newRequest.post('/auth/register', formData);
       localStorage.setItem("currentUser", JSON.stringify(response.data));
       console.log('Registration successful:', response.data);
-      navigate("/");
+      window.location.href = "/";
 
     } catch (error) {
       console.error('Registration failed:', error.response.data);
