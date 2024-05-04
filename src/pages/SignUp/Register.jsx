@@ -5,8 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import {CircleLoader} from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
-import Header from '../../components/Header/Header.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+
 
 function Register() {
 
@@ -75,10 +74,7 @@ function Register() {
   };
   return (
     <div className='sign-in'>
-      <Header/>
-      {/* <Link className='home-logo' to='/'>
-        <img src={logo} className='logo-1' alt='logo' />
-      </Link> */}
+     
       <div className='sign-in-container3'>
         <div className='sign-in-header'>Sign up</div>
         <p className='sign-up-now'>Sign up now to get started with an account</p>
@@ -187,9 +183,7 @@ function Register() {
           </Link>
         </div>
       </div>
-      <div className='footer-sec'>
-      <Footer/>
-      </div>
+      
      
     </div>
   );

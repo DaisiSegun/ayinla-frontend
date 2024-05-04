@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { CircleLoader } from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
-import Header from '../../components/Header/Header.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+
 
 
 
@@ -54,10 +53,7 @@ function SignIn() {
 
   return (
     <div className='sign-in'>
-      <Header/>
-      {/* <Link className='home-logo' to='/'>
-        <img src={logo} className='logo-1' alt='logo' />
-      </Link> */}
+     
       <div className='sign-in-container2'>
         <div className='sign-in-header'>Sign in</div>
 
@@ -105,10 +101,7 @@ function SignIn() {
           </Link>
         </div>
       </div>
-<div className='footer-sec'> 
-<Footer/>
-</div>
-     
+
     </div>
   );
 }

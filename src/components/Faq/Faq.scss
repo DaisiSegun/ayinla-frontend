@@ -6,6 +6,38 @@
 }
 
 .faq-con {
+  .drop-down {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    
+
+    .drop-text {
+      flex: 1;
+      margin: 0;
+     
+    }
+
+    .drop-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .dropdown-info {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9rem;
+    font-weight: 600;
+    
+  }
+}
+
+
+.faq-con {
   display: flex;
   gap: 1rem;
   flex-direction: column;

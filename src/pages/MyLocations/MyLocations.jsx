@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 import './MyLocations.scss';
-import Header from '../../components/Header/Header';
+
 
 
 import getCurrentUser from '../../utils/getCurrentUser';
 import { Link, useNavigate } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
 import EditIcon from '@mui/icons-material/Edit';
-import Footer from '../../components/Footer/Footer';
+
 
 
 
@@ -52,7 +52,7 @@ function MyLocations() {
 
   return (
     <div className="add-service">
-      <Header/>
+    
       <div className="container">
         <div className="first-section">
           <h1 className="add-service-header">Locations Available</h1>
@@ -107,8 +107,8 @@ function MyLocations() {
           </table>
         )}
       </div>
-      <div style={{ marginBottom: '5rem' }}></div>
-     <Footer/>
+      
+     
     </div>
   );
 }

@@ -40,8 +40,8 @@ function Header() {
       </div>
 
       <div className='section-2'>
-        <div className='menu'>About us</div>
-        <div className='menu'>Location</div>
+        <div  onClick={() => window.location.href = '/about-us'}  className='menu' >About us</div>
+        <div  onClick={() => window.location.href = '/all-location'}  className='menu'>Locations</div>
         <div className='menu'>Contact us</div>
 
         {currentUser ? (

@@ -10,10 +10,10 @@ import upload from "../../utils/upload.js";
 import { CircleLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
 import getCurrentUser from "../../utils/getCurrentUser.js";
-import Header from "../../components/Header/Header.jsx";
+
 
 import Select from 'react-select';
-import Footer from "../../components/Footer/Footer.jsx";
+
 
 function CreateLocation() {
   useEffect(() => {
@@ -153,7 +153,7 @@ function CreateLocation() {
     
 
     <div className='create-service'>
-      <Header showSearch={false}/>
+    
       <div className="header-create">
         Create new location
       </div>
@@ -274,7 +274,7 @@ function CreateLocation() {
             {uploading ? (
               <>
                 <CircleLoader size={25} color="#36D7B7" uploading={uploading} />
-                <span style={{ marginLeft: "10px" }}>Creating Service...</span>
+                <span style={{ marginLeft: "10px" }}>Posting Location...</span>
               </>
             ) : (
               <>
@@ -290,8 +290,7 @@ function CreateLocation() {
       </div>
     
       <div className='space'></div>
-      <div style={{ marginBottom: '5rem' }}></div>
-      <Footer/>
+      
     </div>
   )
 }

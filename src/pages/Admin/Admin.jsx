@@ -1,12 +1,12 @@
 import React from 'react'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './Admin.scss'
-import Header from '../../components/Header/Header';
+
 
 import { Link } from 'react-router-dom';
 import getCurrentUser from '../../utils/getCurrentUser';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../components/Footer/Footer';
+
 
 function Admin() {
   const currentUser = getCurrentUser();
@@ -22,7 +22,7 @@ function Admin() {
   return (
     <div className='menu'>
 
-      <Header/>
+
       
       <div className="menu-con">
 
@@ -47,9 +47,7 @@ function Admin() {
 
 
       </div>
-      <div style={{ marginBottom: '5rem' }}></div>
-      <Footer/>
-
+      
     </div>
   )
 }

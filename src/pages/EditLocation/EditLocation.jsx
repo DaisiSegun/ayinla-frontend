@@ -9,7 +9,7 @@ import upload from "../../utils/upload.js";
 import { CircleLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
 import getCurrentUser from "../../utils/getCurrentUser.js";
-import Header from "../../components/Header/Header.jsx";
+
 
 function EditLocation() {
   const location = useLocation();
@@ -142,7 +142,7 @@ function EditLocation() {
     
 
     <div className='create-service'>
-      <Header />
+    
       <div className="header-create">
       Edit Location
       </div>

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../../components/Header/Header';
 import './Location.scss';
-import Footer from '../../components/Footer/Footer';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
 import { useParams } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
-import logo from '../../images/logo.png';
+// import logo from '../../images/logo.png';
 
 function Location() {
+
+
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [service, setService] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,27 +30,35 @@ function Location() {
   if (loading) {
     return (
       <div className='loading'>
-        <Header />
+       
         <div className='loading-con'>
-          <img alt='logo' className='loading-img' src={logo} />
+          {/* <img alt='logo' className='loading-img' src={logo} /> */}
           <p className='loading-text'>Loading please wait...</p>
         </div>
       </div>
     );
   }
+  
+
+ 
 
   return (
     <div className='location-page'>
-      <Header />
+     
       {service && (
         <div className='location'>
           <div className='location-sec-1'>
-          <img
-                    
-                    src={service.images}
-                    alt=''
-                    className="location-img"
-                  />
+          <AwesomeSlider
+              organicArrows={true}
+              bullets={true}
+              className='carousel'
+              selected={currentIndex}
+              onChange={setCurrentIndex}
+            >
+              {service.images.map((image, index) => (
+                <div key={index} data-src={image} />
+              ))}
+            </AwesomeSlider>
           </div>
           <div className='location-sec-2'>
             <p className='area-location'>{service.locationAdress}</p>
@@ -63,7 +74,7 @@ function Location() {
         </div>
       )}
       <div className='footer-sec'>
-        <Footer />
+        
       </div>
     </div>
   );

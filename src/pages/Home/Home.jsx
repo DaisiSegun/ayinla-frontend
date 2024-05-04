@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
-import Header from "../../components/Header/Header";
+import React, { useState, useEffect, } from "react";
+
 import LocationCard from "../../components/LocationCard/LocationCard";
 import './Home.scss'
 import home1 from '../../images/home-1.jpeg'
 import Faq from "../../components/Faq/Faq";
 import Aboutus from "../../components/Aboutus/Aboutus";
-import Footer from "../../components/Footer/Footer";
+
 
 
 
@@ -14,6 +14,7 @@ function Home() {
 
   const [loading, setLoading] = useState(true);
   const [locations, setLocations] = useState([]);
+
 
   useEffect(() => {
     fetch('http://localhost:5000/api/services/all')
@@ -28,9 +29,11 @@ function Home() {
       });
   }, []);
 
+
+
   return (
     <div className="home">
-       <Header/>
+     
 
     <div className="sec-1">
       <div className="sec-1-img">
@@ -52,7 +55,7 @@ function Home() {
       <h1 className="sec2-header">Our most popular Locations</h1>
       <div className="sec2-subheader-con">
         <p className="sec2-subheader">Discover some of the most popular location on our website</p>
-        <div className="view-all">View all</div>
+        <div onClick={() => window.location.href = '/all-location'} className="view-all">View all</div>
       </div>
 
       {loading ? (
@@ -100,14 +103,12 @@ function Home() {
 
       </div>
 
-      <div className="sec-5">  
+      <div className="sec-5"  >  
           <Aboutus/>  
           
       </div>
 
-      <div className="sec-6">
-        <Footer/>
-      </div>
+     
 
 
     </div>

@@ -1,9 +1,14 @@
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import AboutUs from "./pages/AboutUs/AboutUs";
 import Admin from "./pages/Admin/Admin";
+import AllLocations from "./pages/AllLocations/AllLocations";
 import CreateLocation from "./pages/CreateLocation/CreateLocation";
 import EditLocation from "./pages/EditLocation/EditLocation";
 import Home from "./pages/Home/Home";
 import Location from "./pages/Location/Location";
 import MyLocations from "./pages/MyLocations/MyLocations";
+import SearchResult from "./pages/SearchResult/SearchResult";
 import SignIn from "./pages/SignIn/SignIn";
 import Register from "./pages/SignUp/Register";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -12,6 +17,7 @@ function App() {
   return (
     <div>
         <Router>
+          <Header/>
           <Routes>
           <Route
               path="/"
@@ -26,11 +32,15 @@ function App() {
             <Route tittle='Create Location' element={<CreateLocation/>} path="/create-location" />
             <Route tittle='My Locations' element={<MyLocations/>} path="/my-locations" />
             <Route tittle='Edit Location' element={<EditLocation/>} path="/edit-location/:id" />
+            <Route tittle='About us' element={<AboutUs/>} path="/about-us" />
+            <Route tittle='Search Result' element={<SearchResult/>} path="/search-result" />
+            <Route tittle='All Location' element={<AllLocations/>} path="/all-location" />
             
 
             
 
           </Routes>
+          <Footer/>
         </Router>
     </div>
   );
