@@ -22,7 +22,7 @@ mongoose.set('strictQuery', true);
 const connect = async () => {
   try {
     await mongoose.connect(MONGO_URI);
-    console.log("Connected to MongoDB!");
+    console.log("Connect to MongoDB!");
   } catch (error) {
     console.log(error);
   }
