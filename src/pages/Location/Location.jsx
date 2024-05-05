@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Location.scss';
-import AwesomeSlider from 'react-awesome-slider';
+// import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import { useParams } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
@@ -12,7 +12,7 @@ function Location() {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [service, setService] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,7 +48,7 @@ function Location() {
       {service && (
         <div className='location'>
           <div className='location-sec-1'>
-          <AwesomeSlider
+          {/* <AwesomeSlider
               organicArrows={true}
               bullets={true}
               className='carousel'
@@ -58,7 +58,9 @@ function Location() {
               {service.images.map((image, index) => (
                 <div key={index} data-src={image} />
               ))}
-            </AwesomeSlider>
+            </AwesomeSlider> */}
+
+            <img src={service.images[0]} alt='' className='location-img' />
           </div>
           <div className='location-sec-2'>
             <p className='area-location'>{service.locationAdress}</p>

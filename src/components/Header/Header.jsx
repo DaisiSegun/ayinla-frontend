@@ -32,6 +32,9 @@ function Header() {
   const currentUser = getCurrentUser();
 
   return (
+    <div className='header-user'>
+
+   
     <div className='header'>
 
       <div className='hello-user'>
@@ -44,9 +47,7 @@ function Header() {
         <Search/>
        
       </div>
-      {currentUser && (
-          <p className='hello-user-text'>Hello, {currentUser.user.username}</p>
-        )}
+    
 
       </div>
       <div className='menu-align'>
@@ -81,6 +82,10 @@ function Header() {
       
 
       </div>
+    </div>
+    {currentUser && (
+          <p className='hello-user-text'>Hello, {currentUser.user.username}</p>
+        )}
     </div>
   );
 }

@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://roothq.africa", "https://www.roothq.africa", "https://hammerhead-app-xv9fq.ondigitalocean.app", "https://wwww.hammerhead-app-xv9fq.ondigitalocean.app"],
+  origin: ["http://localhost:3000", "https://ayinla-frontend.vercel.app", "https://wwww.ayinla-frontend.vercel.app"],
   credentials: true,
 }));
 

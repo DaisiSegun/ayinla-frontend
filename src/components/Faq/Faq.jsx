@@ -21,7 +21,7 @@ function Faq() {
       </div>
       {isOpen1 && (
         <div className='dropdown-info'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>We offer both outdoor or indoor location please use the search to discover.</p>
         </div>
       )}
 
@@ -31,7 +31,7 @@ function Faq() {
       </div>
       {isOpen2 && (
         <div className='dropdown-info'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>We offer both mainland and island locations please use the search to discover..</p>
         </div>
       )}
 
@@ -41,7 +41,7 @@ function Faq() {
       </div>
       {isOpen3 && (
         <div className='dropdown-info'>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo explicabo amet minima </p>
+          <p>Depending on the location but we offer both day and nightime </p>
         </div>
       )}
 
@@ -51,7 +51,7 @@ function Faq() {
       </div>
       {isOpen4 && (
         <div className='dropdown-info'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>This is dependent on the location</p>
         </div>
       )}
     </div>

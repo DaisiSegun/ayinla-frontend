@@ -4,21 +4,21 @@ import './Admin.scss'
 
 
 import { Link } from 'react-router-dom';
-import getCurrentUser from '../../utils/getCurrentUser';
-import { useNavigate } from 'react-router-dom';
+// import getCurrentUser from '../../utils/getCurrentUser';
+// import { useNavigate } from 'react-router-dom';
 
 
 function Admin() {
-  const currentUser = getCurrentUser();
-  const navigate = useNavigate();
+  // const currentUser = getCurrentUser();
+  // const navigate = useNavigate();
 
 
 
-  if (!currentUser || !currentUser.user.isAdmin) {
-    // Redirect to a different page if the user is not an admin
-    navigate('/');
-    return null; // Render nothing while redirecting
-  }
+  // if (!currentUser || !currentUser.user.isAdmin) {
+  //   // Redirect to a different page if the user is not an admin
+  //   navigate('/');
+  //   return null; // Render nothing while redirecting
+  // }
   return (
     <div className='menu'>
 

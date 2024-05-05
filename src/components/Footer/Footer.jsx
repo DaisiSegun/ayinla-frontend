@@ -14,14 +14,14 @@ function Footer() {
       </div>
 
       <div className='secs1'>
-      <p className='footer-text'>About Us</p>
-      <p className='footer-text'>Privacy policy</p>
-      <p className='footer-text'>FAQs</p>
+      <p onClick={() => window.location.href = '/about-us'} className='footer-text'>About Us</p>
+      <p onClick={() => window.location.href = '/privacy-policy'} className='footer-text'>Privacy policy</p>
+      <p  className='footer-text'>FAQs</p>
       </div>
 
       <div className='secs1'>
-      <p className='footer-text'>Locations</p>
-      <p className='footer-text'>Contact us</p>
+      <p onClick={() => window.location.href = '/all-location'} className='footer-text'>Locations</p>
+      <p onClick={() => window.location.href = '/contact-us'} className='footer-text'>Contact us</p>
       </div>
 
     </div>

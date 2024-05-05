@@ -56,14 +56,14 @@ function MyLocations() {
       <div className="container">
         <div className="first-section">
           <h1 className="add-service-header">Locations Available</h1>
-          {currentUser.user.isAdmin && (
+        
             <Link to="/create-location" className="link">
               <div className="button1">
                 Add new Location
                
               </div>
             </Link>
-          )}
+         
         </div>
 
         {isLoading ? (

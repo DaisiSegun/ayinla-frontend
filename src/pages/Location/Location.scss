@@ -118,3 +118,131 @@
 
  
 }
+
+@media screen and (max-width: 950px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+  }
+  .carousel {
+    width: 41rem;
+    margin-bottom: 2rem;
+    height: auto;
+    max-height: 27.375rem;
+    border-radius: 0.3125rem;
+    img {
+      max-height: 500px;
+      object-fit: contain;
+    }
+  
+  
+    @media only screen and (max-width: 768px) {
+      width: 100%; // Adjust the width for tablet size
+    }
+  
+    @media only screen and (max-width: 480px) {
+      width: 100%; // Adjust the width for mobile size
+    }
+  
+  }
+  .loading {
+    display: flex;
+    flex-direction: column;
+        .loading-con {
+          align-self: center;
+          height: 50vh;
+          justify-self: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          .loading-text {
+            font-weight: 500;
+            margin-top: 6rem;
+          }
+        }
+  }
+  
+  .location-page {
+  
+    .location {
+      display: flex;
+      gap: 1.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      flex-direction: column;
+    }
+  
+    .location-sec-1 {
+         .location-img{
+          width: 300px;
+          height: 250px; 
+          border-radius: 20px; 
+          object-fit: cover;                   
+         }
+    }
+  
+    .location-sec-2 {
+      display: flex;
+      flex-direction: column;
+  
+        .area-location{
+          font-size: 0.85rem;
+          color: #24AB70;
+          margin-bottom: 0.3rem;
+        }
+        .location-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+  
+        .location-price{
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        .location-desc {
+          font-size: 0.75;
+          font-weight: 400;
+          margin-bottom: 1rem;
+          line-height: 2;
+        }
+        .location-time{
+          font-size: 0.85rem;
+          font-weight: 500;
+          margin-bottom: 1rem;
+          margin-top: 1.5rem;
+        }
+  
+    }
+    .location-button-sec {
+      display: flex;
+      flex-direction: column;
+      align-self: last baseline;
+  
+        .location-button {
+          padding: 1rem;
+          border-radius: 2rem;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          background-color: #223A6A;
+          font-size: 1rem;
+          cursor: pointer;
+          border-style: none;
+          color: white;
+          margin-bottom: 1rem;
+        }
+        
+        .inspection-price{
+          font-weight: 1rem;
+          font-weight: 600;
+          
+        }
+    }
+  
+   
+  }
+
+}
