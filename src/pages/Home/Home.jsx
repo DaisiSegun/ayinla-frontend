@@ -17,7 +17,7 @@ function Home() {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/services/all')
+    fetch('https://lazy-cyan-wombat-hem.cyclic.app/api/services/all')
       .then(response => response.json())
       .then(data => {
         setLocations(data);

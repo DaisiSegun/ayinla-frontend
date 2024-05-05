@@ -42,7 +42,7 @@
 
     .suggestion-list {
       position: absolute;
-      top: 15%; // Position below the input
+      top: 12%; // Position below the input
       left: 0;
       width: 30%;
       margin-left: 6rem;
@@ -51,7 +51,7 @@
       background: #FFF;
       border: 1px solid var(--Dark-Blue, #0F253B);
       border-top: none; // Remove top border to separate from input
-      border-radius: 1rem; // Adjust border-radius to match input
+      border-radius: 0.3rem; // Adjust border-radius to match input
       box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 
       li {
@@ -67,4 +67,81 @@
       }
 
     }
+}
+
+@media screen and (max-width: 850px) { 
+
+
+  .search {
+    display: flex;
+   align-items: center;
+   
+  
+    color: white;
+    cursor: pointer;
+    gap: 0.5rem;
+    align-self: center;
+  
+    .input-1 {
+      width: 80%;
+      border-radius: 1rem;
+      border-style: solid;
+      border-width: 1px;
+      padding: 0.25rem;
+      margin-bottom: 0.2rem;
+      padding-left: 1rem;
+  
+       
+      &:focus {
+        border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
+        outline: none; // Remove the default focus outline
+        border-style: solid;
+        border-width: 1px;
+        padding-left: 1rem;
+      }
+    }
+      .search-icon{
+        object-fit: contain;
+        margin-top: 0.2rem;
+        background-color: #0F253B;
+        padding: 0.35rem;
+        border-radius: 1rem;
+        margin-left: -0.2rem;
+        
+      }
+      .search-text {
+        font-size: 1rem;
+      }
+  
+      .suggestion-list {
+        position: absolute;
+        top: 8%; // Position below the input
+        left: 0;
+        width: 30%;
+        margin-left: 6rem;
+        max-height: 150px; // Set a max height for the suggestion list
+        overflow-y: auto;
+        background: #FFF;
+        border: 1px solid var(--Dark-Blue, #0F253B);
+        border-top: none; // Remove top border to separate from input
+        border-radius: 0.3rem; // Adjust border-radius to match input
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+  
+        li {
+          list-style: none;
+          padding: 0.5rem;
+          cursor: pointer; // Add cursor pointer
+          transition: background 0.3s;
+          color: black;
+  
+          &:hover {
+            background: #F0F0F0; // Change background color on hover
+          }
+        }
+  
+      }
+  }
+  
+
 }

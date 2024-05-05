@@ -30,8 +30,8 @@ function AllLocations() {
 
   if (isLoading) {
     return (
-      <div className='loader'>
-        <div className='load-page'>
+      <div className='lor'>
+        <div className='load'>
           <p className='load-text'>Loading, please kindly wait..</p>
         </div>
       </div>
