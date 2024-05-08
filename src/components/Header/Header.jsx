@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.scss';
 import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
@@ -6,28 +6,16 @@ import Search from '../Search/Search';
 import profileImg from '../../images/avatar.jpg';
 import getCurrentUser from '../../utils/getCurrentUser.js';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import newRequest from '../../utils/newRequest.js';
+
 import MenuIcon from '@mui/icons-material/Menu';
 
+
+
 function Header() {
-  const [showDropdownContent, setShowDropdownContent] = useState(false);
-  const [loadingLogout, setLoadingLogout] = useState(false);
+  
 
-  const toggleDropdownContent = () => {
-    setShowDropdownContent(!showDropdownContent);
-  };
-
-  const handleLogout = async () => {
-    try {
-      setLoadingLogout(true); // Set loading state to true
-      await newRequest.post("/auth/logout");
-      localStorage.setItem("currentUser", null);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoadingLogout(false); // Reset loading state
-    }
-  };
+ 
+  
 
   const currentUser = getCurrentUser();
 
@@ -57,15 +45,11 @@ function Header() {
         <div className='menu'>Contact us</div>
 
         {currentUser ? (
-          <div className='user-info' onClick={toggleDropdownContent}>
+          <div  onClick={() => window.location.href = '/menu'}  className='user-info' >
             <img  src={currentUser?.user?.profilePicture || profileImg} className='pro-img' alt='Profile' />
             <p>{currentUser?.user?.username.length > 10 ? currentUser?.user?.username.substring(0, 10) + '..' : currentUser?.user?.username}</p>
             <ArrowDropDownIcon />
-            {showDropdownContent && (
-              <div className='dropdown-content-log'>
-                <button className='logout-button' onClick={handleLogout} disabled={loadingLogout}>{loadingLogout ? 'Logging out...' : 'Logout'}</button>
-              </div>
-            )}
+          
           </div>
         ) : (
           <Link to='/sign-in' className='link'>

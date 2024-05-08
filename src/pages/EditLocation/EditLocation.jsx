@@ -6,7 +6,7 @@ import { locationReducer, INITIAL_STATE } from "../../reducers/locationReducer.j
 import { useLocation, useNavigate } from 'react-router-dom';
 import newRequest from '../../utils/newRequest.js'
 import upload from "../../utils/upload.js";
-import { CircleLoader} from "react-spinners";
+import { BarLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
 import getCurrentUser from "../../utils/getCurrentUser.js";
 
@@ -298,7 +298,7 @@ function EditLocation() {
           <button onClick={handleCreateService} className='button2'>
             {uploading ? (
               <>
-                <CircleLoader size={25} color="#36D7B7" uploading={uploading} />
+                <BarLoader size={25} color="#3285d8" uploading={uploading} />
                 <span style={{ marginLeft: "10px" }}>Editing Service...</span>
               </>
             ) : (

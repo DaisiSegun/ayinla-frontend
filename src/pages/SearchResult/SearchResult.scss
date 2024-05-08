@@ -13,17 +13,19 @@
   gap: 2rem;
 }
 .load-page {
-  background-color: #FFF6F8;
+  
   height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
 
   .load-text {
     font-size: 1.2rem;
     font-weight: 600;
     color: black;
+    margin-bottom: 4rem;
 
     .load-gif {
       width: 10rem;
@@ -42,7 +44,7 @@
   margin-bottom: 4rem;
 }
 
-.sps {
+.sps1 {
   display: flex;
   flex-direction: column;
   
@@ -59,18 +61,18 @@
       
     }
 
-    .header-24px {
+    .header-all3 {
       
       color: #000;
       font-family: Open Sans;
       font-size: 1.5rem;
-      font-style: normal;
+      font-style: normal; 
       font-weight: 600;
       line-height: 1.5rem; /* 100% */
-      margin-top: 2rem;
+      margin-top: 1rem;
      }
 
-     .subtitle-text {
+     .subtitle-text2 {
       color: gray;
       font-family: Open Sans;
       font-size: 0.75rem;
@@ -83,7 +85,7 @@
      }
 }
 
-@media screen and (max-width: 650px) { 
+@media screen and (max-width: 850px) { 
 
   * {
     margin: 0;
@@ -91,15 +93,22 @@
     box-sizing: border-box;
     font-family: 'Open Sans';
   }
+  .location-card-con {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
 
   .load-page {
-    background-color: #FFF6F8;
-    height: 100vh;
+    
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: -2rem;
+    background-color: white;
   
     .load-text {
       font-size: 0.75rem;
@@ -122,9 +131,12 @@
   .space25 {
     margin-bottom: 4rem;
   }
-  .sps {
+  .sps1 {
     display: flex;
     flex-direction: column;
+    padding-left: 1rem;
+  padding-right: 1rem;
+
       
       .line {
         .line {
@@ -136,25 +148,26 @@
         
       }
   
-      .header-24px {
-        margin-left: 1rem;
+      .header-all3 {
+       
         color: #000;
         font-family: Open Sans;
         font-size: 1.2rem;
         font-style: normal;
         font-weight: 600;
         line-height: 1.5rem; /* 100% */
+        margin-top: -0.5rem;
      
        }
   
-       .subtitle-text {
+       .subtitle-text2 {
         color: gray;
         font-family: Open Sans;
         font-size: 0.75rem;
         font-style: normal;
         font-weight: 400;
         line-height: 1rem; /* 171.429% */
-        margin-left: 1rem;
+        
         margin-top: 0.25rem;
        }
   }

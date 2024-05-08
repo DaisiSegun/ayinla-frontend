@@ -57,10 +57,10 @@ function SearchResult() {
   }
 
   return (
-    <div className='sps'>
+    <div className='sps1'>
     
-    <h1 className='header-24px'>Search Result</h1>
-    <p className='subtitle-text'>Find a film location</p>
+    <h1 className='header-all3'>Search Result</h1>
+    <p className='subtitle-text2'>Find a film location</p>
 
     {data.length === 0 && <Sorry />}
 

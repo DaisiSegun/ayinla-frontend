@@ -2,7 +2,17 @@ import React from 'react'
 import facebook from '../../images/facebook.svg'
 import instagram from '../../images/instagram.svg'
 import './Footer.scss'
+import chat from '../../images/chat-blue.svg'
 function Footer() {
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '+2349050132244'; // Your WhatsApp number
+    const message = encodeURIComponent('Hello, I would like to chat with Ayinla films.'); // Message to send
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
+
+
+  
   return (
     <div className='footer'>
       <div className='secs1'>
@@ -23,6 +33,8 @@ function Footer() {
       <p onClick={() => window.location.href = '/all-location'} className='footer-text'>Locations</p>
       <p onClick={() => window.location.href = '/contact-us'} className='footer-text'>Contact us</p>
       </div>
+
+      <img onClick={handleWhatsAppClick}  src={chat} className='chat-bot' alt='' />
 
     </div>
   )

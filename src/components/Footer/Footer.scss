@@ -4,12 +4,24 @@
   box-sizing: border-box;
   font-family: 'Open Sans';
 }
+html {
+  position: relative;
+  min-height: 100%;
+}
 
+.chat-bot {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  cursor: pointer;
+  
+}
 .footer {
+  position: absolute;
+  bottom: 1;
+  width: 95%;
   display: flex;
   gap: 2rem;
-  
-  margin-top: 2.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
@@ -19,6 +31,8 @@
   padding-top: 1.5rem;
   margin-left: 2rem;
   margin-right: 2rem;
+
+
 
 
   
@@ -54,7 +68,9 @@
   .footer {
     display: flex;
     gap: 2rem;
-    
+    position: absolute;
+  bottom: 1;
+   width: 100%;
     margin-top: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -63,8 +79,8 @@
     border-top-color: #ccc;
     border-top-width: 1px;
     padding-top: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0rem;
+    margin-right: 0rem;
   
     
     

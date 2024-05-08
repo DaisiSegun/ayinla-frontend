@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Location.scss';
-// import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { useParams } from 'react-router-dom';
 import newRequest from '../../utils/newRequest';
-// import logo from '../../images/logo.png';
 
 function Location() {
-
-
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [service, setService] = useState(null);
-  // const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,37 +27,42 @@ function Location() {
   if (loading) {
     return (
       <div className='loading'>
-       
         <div className='loading-con'>
-          {/* <img alt='logo' className='loading-img' src={logo} /> */}
           <p className='loading-text'>Loading please wait...</p>
         </div>
       </div>
     );
   }
-  
 
- 
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768, // Show arrows on screens larger than 768px
+        settings: {
+          arrows: true,
+        },
+      },
+    ],
+  };
   return (
     <div className='location-page'>
-     
       {service && (
         <div className='location'>
           <div className='location-sec-1'>
-          {/* <AwesomeSlider
-              organicArrows={true}
-              bullets={true}
-              className='carousel'
-              selected={currentIndex}
-              onChange={setCurrentIndex}
-            >
+            <Slider {...settings}>
               {service.images.map((image, index) => (
-                <div key={index} data-src={image} />
+                <div key={index}>
+                  <img className='location-img' src={image} alt={`Slide ${index}`} />
+                </div>
               ))}
-            </AwesomeSlider> */}
-
-            <img src={service.images[0]} alt='' className='location-img' />
+            </Slider>
           </div>
           <div className='location-sec-2'>
             <p className='area-location'>{service.locationAdress}</p>
@@ -75,9 +77,7 @@ function Location() {
           </div>
         </div>
       )}
-      <div className='footer-sec'>
-        
-      </div>
+      <div className='footer-sec'></div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { locationReducer, INITIAL_STATE } from "../../reducers/locationReducer";
 
 import newRequest from '../../utils/newRequest.js'
 import upload from "../../utils/upload.js";
-import { CircleLoader} from "react-spinners";
+import { BarLoader} from "react-spinners";
 import Resizer from 'react-image-file-resizer';
 import getCurrentUser from "../../utils/getCurrentUser.js";
 
@@ -273,7 +273,7 @@ function CreateLocation() {
           <button onClick={handleCreateService} className='button2'>
             {uploading ? (
               <>
-                <CircleLoader size={25} color="#36D7B7" uploading={uploading} />
+                <BarLoader color={"#3285d8"} size={20}  uploading={uploading} />
                 <span style={{ marginLeft: "10px" }}>Posting Location...</span>
               </>
             ) : (
@@ -284,7 +284,7 @@ function CreateLocation() {
             )}
           </button>
           
-    
+
       
         </div>
       </div>

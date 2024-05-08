@@ -3,7 +3,7 @@ import './Register.scss';
 
 import { Link} from 'react-router-dom';
 
-import {CircleLoader} from "react-spinners";
+import {BarLoader} from "react-spinners";
 import newRequest from "../../utils/newRequest.js";
 
 
@@ -170,7 +170,7 @@ function Register() {
 
         <div className='button3' onClick={handleRegistration}>
           {loading ? (
-            <CircleLoader color={"#36D7B7"} size={20} />
+            <BarLoader color={"#3285d8"} size={20} />
           ) : (
             'Register'
           )}
