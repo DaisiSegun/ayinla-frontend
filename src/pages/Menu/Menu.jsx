@@ -47,6 +47,10 @@ function Menu() {
           Contact us
           <ArrowForwardIosIcon/>
           </Link>
+          <Link to='/all-location' className="menu-nav">
+          Locations
+          <ArrowForwardIosIcon/>
+          </Link>
 
           
         <div onClick={handleLogout} disabled={loadingLogout} className="menu-nav">

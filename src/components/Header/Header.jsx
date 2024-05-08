@@ -66,6 +66,7 @@ function Header() {
       {/* Menu bar for responsiveness */}
       <div onClick={() => window.location.href = '/menu'} className='menu-bar'>
           <MenuIcon className='menu-icon'/>
+          <p className='menu-text'>Menu</p>
           
       </div>
       
