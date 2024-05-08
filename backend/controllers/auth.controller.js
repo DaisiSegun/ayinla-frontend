@@ -163,7 +163,7 @@ const register = async (req, res, next) => {
         httpOnly: true,
       })
      
-      .status(201)
+      .status(200)
       .json({ message: 'User registered successfully', user: userDetails} );
 
   } catch (error) {
