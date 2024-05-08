@@ -62,13 +62,10 @@ function Home() {
         <p>Loading...</p> // Render a loading message or spinner while loading
       ) : (
         <div className="locationCard-con">
-          {locations.map(location => (
-            <LocationCard
-              key={location._id}
-              item={location}
-            />
-          ))}
-        </div>
+            {locations.slice(0, 4).map(location => (
+              <LocationCard key={location._id} item={location} />
+            ))}
+          </div>
       )}
 
 
