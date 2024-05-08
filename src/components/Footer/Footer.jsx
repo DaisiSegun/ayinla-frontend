@@ -2,7 +2,7 @@ import React from 'react'
 import facebook from '../../images/facebook.svg'
 import instagram from '../../images/instagram.svg'
 import './Footer.scss'
-import chat from '../../images/chat-blue.svg'
+import chat from '../../images/chat-ayinla.svg'
 function Footer() {
 
   const handleWhatsAppClick = () => {
@@ -26,12 +26,12 @@ function Footer() {
       <div className='secs1'>
       <p onClick={() => window.location.href = '/about-us'} className='footer-text'>About Us</p>
       <p onClick={() => window.location.href = '/privacy-policy'} className='footer-text'>Privacy policy</p>
-      <p  className='footer-text'>FAQs</p>
+      <p onClick={() => window.location.href = '/faq'} className='footer-text'>FAQs</p>
       </div>
 
       <div className='secs1'>
       <p onClick={() => window.location.href = '/all-location'} className='footer-text'>Locations</p>
-      <p onClick={() => window.location.href = '/contact-us'} className='footer-text'>Contact us</p>
+      <p onClick={handleWhatsAppClick} className='footer-text'>Contact us</p>
       </div>
 
       <img onClick={handleWhatsAppClick}  src={chat} className='chat-bot' alt='' />

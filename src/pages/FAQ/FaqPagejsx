@@ -1,0 +1,13 @@
+import React from 'react'
+import Faq from '../../components/Faq/Faq'
+
+function FaqPagejsx() {
+  return (
+    <div className='faq-page'>
+        <Faq/>
+
+    </div>
+  )
+}
+
+export default FaqPagejsx

@@ -37,7 +37,7 @@ function Menu() {
           <ArrowForwardIosIcon/>
         </Link>
      
-        <Link to='/sign-up' className="menu-nav">
+        <Link to='/register' className="menu-nav">
           Sign up
           <ArrowForwardIosIcon/>
         </Link>

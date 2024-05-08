@@ -14,6 +14,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 function Header() {
   
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '+2349050132244'; // Your WhatsApp number
+    const message = encodeURIComponent('Hello, I would like to chat with Ayinla films.'); // Message to send
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
  
   
 
@@ -42,7 +47,7 @@ function Header() {
       <div className='section-22  '>
         <div  onClick={() => window.location.href = '/about-us'}  className='menu' >About us</div>
         <div  onClick={() => window.location.href = '/all-location'}  className='menu'>Locations</div>
-        <div className='menu'>Contact us</div>
+        <div onClick={handleWhatsAppClick}  className='menu'>Contact us</div>
 
         {currentUser ? (
           <div  onClick={() => window.location.href = '/menu'}  className='user-info' >

@@ -6,6 +6,7 @@ import Admin from "./pages/Admin/Admin";
 import AllLocations from "./pages/AllLocations/AllLocations";
 import CreateLocation from "./pages/CreateLocation/CreateLocation";
 import EditLocation from "./pages/EditLocation/EditLocation";
+import FaqPagejsx from "./pages/FAQ/FaqPagejsx";
 import Home from "./pages/Home/Home";
 import Location from "./pages/Location/Location";
 import Menu from "./pages/Menu/Menu";
@@ -38,6 +39,7 @@ function App() {
             <Route tittle='Search Result' element={<SearchResult/>} path="/search-result" />
             <Route tittle='All Location' element={<AllLocations/>} path="/all-location" />
             <Route tittle='Menu' element={<Menu/>} path="/menu" />
+            <Route tittle='FAQ' element={<FaqPagejsx/>} path="/faq" />
             
 
             
