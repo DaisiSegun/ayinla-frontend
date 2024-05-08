@@ -19,7 +19,7 @@
 
      
     &:focus {
-      border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+      border-color: var(--Dark-Blue, #223A6A); // Change the border color to the same as default when focused
       box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
       outline: none; // Remove the default focus outline
       border-style: solid;
@@ -30,7 +30,7 @@
     .search-icon{
       object-fit: contain;
       margin-top: 0.2rem;
-      background-color: #0F253B;
+      background-color: #223A6A;
       padding: 0.35rem;
       border-radius: 1rem;
       margin-left: -0.2rem;
@@ -49,7 +49,7 @@
       max-height: 150px; // Set a max height for the suggestion list
       overflow-y: auto;
       background: #FFF;
-      border: 1px solid var(--Dark-Blue, #0F253B);
+      border: 1px solid var(--Dark-Blue, #223A6A);
       border-top: none; // Remove top border to separate from input
       border-radius: 0.3rem; // Adjust border-radius to match input
       box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
@@ -93,7 +93,7 @@
   
        
       &:focus {
-        border-color: var(--Dark-Blue, #0F253B); // Change the border color to the same as default when focused
+        border-color: var(--Dark-Blue, #223A6A); // Change the border color to the same as default when focused
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05); // You can customize this as needed
         outline: none; // Remove the default focus outline
         border-style: solid;
@@ -104,7 +104,7 @@
       .search-icon{
         object-fit: contain;
         margin-top: 0.2rem;
-        background-color: #0F253B;
+        background-color: #223A6A;
         padding: 0.35rem;
         border-radius: 1rem;
         margin-left: -0.2rem;
@@ -123,7 +123,7 @@
         max-height: 150px; // Set a max height for the suggestion list
         overflow-y: auto;
         background: #FFF;
-        border: 1px solid var(--Dark-Blue, #0F253B);
+        border: 1px solid var(--Dark-Blue, #223A6A);
         border-top: none; // Remove top border to separate from input
         border-radius: 0.3rem; // Adjust border-radius to match input
         box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);

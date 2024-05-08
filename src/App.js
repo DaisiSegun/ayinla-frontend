@@ -15,6 +15,7 @@ import SearchResult from "./pages/SearchResult/SearchResult";
 import SignIn from "./pages/SignIn/SignIn";
 import Register from "./pages/SignUp/Register";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Terms from "./pages/TermsAndConditions/Terms";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route tittle='All Location' element={<AllLocations/>} path="/all-location" />
             <Route tittle='Menu' element={<Menu/>} path="/menu" />
             <Route tittle='FAQ' element={<FaqPagejsx/>} path="/faq" />
+            <Route tittle='Terms and Conditions' element={<Terms/>} path="/termsandconditions" />
             
 
             

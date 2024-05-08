@@ -16,7 +16,7 @@ function EditLocation() {
   const serviceId = location.pathname.split('/').pop();
   const [previousService, setPreviousService] = useState({});
   useEffect(() => {
-    document.title = 'Edit Service';
+    document.title = 'Edit Location';
     const fetchService = async () => {
       try {
         const response = await newRequest.get(`/services/single/${serviceId}`);
@@ -110,7 +110,7 @@ function EditLocation() {
       setUploading(false);
       dispatch({ type: 'ADD_IMAGES', payload: { images } });
       setSuccessMessage(
-        'Your service has been updated'
+        'Your Location has been updated'
       );
       setErrorMessage(null);
     } catch (err) {
@@ -197,14 +197,14 @@ function EditLocation() {
           </select>
 
           <div className="create-contianer">
-              <p className='create-title'>Edit your Company/Brand Description</p>
+              <p className='create-title'>Edit your Location description</p>
               <textarea
                 type="text"
                 name="desc"
                 value={previousService.desc || ''} // Set the value prop
                 style={{ height: '200px' }}
                 onChange={handleChange}
-                placeholder="Please share a detailed description with all the relevant details."
+                placeholder="Detailed description of the Location."
                 className="create-input2"
               />
 
@@ -213,7 +213,7 @@ function EditLocation() {
 
           
           <div className="create-contianer">
-              <p className='create-title'>edit Service Location (Please make it short)</p>
+              <p className='create-title'>Edit Service Location (Please make it short)</p>
               <input
                 type="text"
                 name="locationAdressc"
@@ -232,7 +232,7 @@ function EditLocation() {
                 name="price"
                 value={previousService.price || ''} // Set the value prop
                 onChange={handleChange}
-                placeholder="minimum fee for your service or type negotiable"
+                placeholder="price"
                 className="create-input"
               />
 
@@ -299,11 +299,11 @@ function EditLocation() {
             {uploading ? (
               <>
                 <BarLoader size={25} color="#3285d8" uploading={uploading} />
-                <span style={{ marginLeft: "10px" }}>Editing Service...</span>
+                <span style={{ marginLeft: "10px" }}>Editing Location...</span>
               </>
             ) : (
               <>
-                Edit Service
+                Edit Location
                
               </>
             )}
