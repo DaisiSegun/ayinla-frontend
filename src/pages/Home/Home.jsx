@@ -5,6 +5,7 @@ import './Home.scss'
 import home1 from '../../images/home-1.jpeg'
 import Faq from "../../components/Faq/Faq";
 import Aboutus from "../../components/Aboutus/Aboutus";
+import ContentLoader from 'react-content-loader';
 
 
 
@@ -14,6 +15,7 @@ function Home() {
 
   const [loading, setLoading] = useState(true);
   const [locations, setLocations] = useState([]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 
   useEffect(() => {
@@ -27,6 +29,9 @@ function Home() {
         console.error('Error fetching locations:', error);
         setLoading(false); // Set loading to false on error
       });
+      const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
 
@@ -59,7 +64,25 @@ function Home() {
       </div>
 
       {loading ? (
-        <p>Loading...</p> // Render a loading message or spinner while loading
+         <ContentLoader
+         speed={2}
+         width={windowWidth > 950 ? 300 : 150}
+         height={windowWidth > 950 ? 300 : 150}
+         viewBox={`0 0 ${windowWidth > 950 ? 300 : 150} ${
+           windowWidth > 950 ? 300 : 150
+         }`}
+         backgroundColor="#f3f3f3"
+         foregroundColor="#ecebeb"
+       >
+         <rect
+           x="0"
+           y="0"
+           rx="3"
+           ry="3"
+           width={windowWidth > 950 ? 300 : 150}
+           height={windowWidth > 950 ? 300 : 150}
+         />
+       </ContentLoader>
       ) : (
         <div className="locationCard-con">
             {locations.slice(0, 4).map(location => (
